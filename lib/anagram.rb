@@ -12,12 +12,7 @@ class Anagram
     def match(arrayofwords)
         wordmatch = []
         wordmatch = arrayofwords.filter{ |arrayword|
-            chararrayword = arrayword.chars
-            sortedarrayword = chararrayword.sort
-            charword = @word.chars
-            sortedword = charword.sort
-            sortedword == sortedarrayword
-            # binding.pry
+            @word.chars.sort == arrayword.chars.sort
         }
         wordmatch
     end
